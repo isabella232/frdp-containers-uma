@@ -6,9 +6,9 @@ FROM maven:3-jdk-8 AS build
 
 # Get the required projects from github
 
-RUN git clone --progress --verbose https://github.com/ForgeRock/frdp-framework 
-RUN git clone --progress --verbose https://github.com/ForgeRock/frdp-dao-mongo
-RUN git clone --progress --verbose https://github.com/ForgeRock/frdp-content-server
+RUN git clone --branch 1.1.0 --progress --verbose https://github.com/ForgeRock/frdp-framework 
+RUN git clone --branch 1.1.1 --progress --verbose https://github.com/ForgeRock/frdp-dao-mongo
+RUN git clone --branch 1.1.2 --progress --verbose https://github.com/ForgeRock/frdp-content-server
 
 # run maven (mvn) to compile jar files and package the war file
 
